@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# AstroPet
+
+AstroPet is a playful productivity companion that gamifies your coding and learning journey. It features a virtual pet that levels up as you solve coding problems, a daily mood journal, and a beautiful cosmic-themed UI. Built with Next.js, React, and Firebase.
+
+## Features
+
+- **Virtual Pet**: Your pet levels up as you solve more questions.
+- **Question Playlist**: Track and solve coding questions, synced with your progress.
+- **AI Chat**: Get help and hints from an integrated AI assistant.
+- **Daily Mood Journal**: Log your mood and notes, with a calendar view and mood statistics.
+- **Modern UI**: AMOLED-friendly, cosmic-inspired design.
+- **Authentication**: Secure login and user data with Firebase Auth and Firestore.
+
+## Tech Stack
+
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [Firebase (Auth & Firestore)](https://firebase.google.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
 ## Getting Started
 
-First, run the development server:
+1. **Clone the repository:**
+   ```sh
+   git clone <your-repo-url>
+   cd ticko
+   ```
+2. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+3. **Configure Firebase:**
+   - Copy your Firebase config to `src/firebaseConfig.ts`.
+   - Make sure Firestore and Auth are enabled in your Firebase project.
+4. **Run the development server:**
+   ```sh
+   npm run dev
+   ```
+5. **Open the app:**
+   - Visit [http://localhost:3000](http://localhost:3000) in your browser.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Folder Structure
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- `src/app/` — Next.js app directory (pages, layout, API routes)
+- `src/components/` — React components (Pet, Journal, Playlist, etc.)
+- `src/data/` — Data sources and mock data
+- `public/` — Static assets
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Future Improvements
+- More mini-games and pet interactions
+- Social features (leaderboards, friend pets)
+- More customization for pets and UI
+- Mobile app version
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+Feel free to open issues or contribute! 🚀
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+#astroPet #nextjs #react #firebase #productivity #gamification
+# AstroPet--AI-coding-pet
