@@ -30,7 +30,6 @@ export default function Journal() {
   const [viewMode, setViewMode] = useState<'log' | 'view'>('log');
   
   const today = new Date();
-  const todayKey = getTodayKey(today);
   const selectedDateKey = getTodayKey(selectedDate);
 
   // Set selected color and note when date changes
@@ -104,7 +103,6 @@ export default function Journal() {
 
   const isToday = isSameDay(selectedDate, today);
   const canEdit = isToday || selectedDate > today; // Can edit today or future dates
-  const hasEntry = logData[selectedDateKey];
 
   // Get mood statistics
   const moodStats = Object.values(logData).reduce((acc, entry) => {
@@ -252,7 +250,7 @@ export default function Journal() {
           <div className="bg-[#232536]/30 rounded-xl p-4">
             <h3 className="text-lg font-semibold text-[#7fd7ff] mb-3">Calendar View</h3>
             <Calendar
-              onChange={handleDateChange}
+              onChange={(value) => handleDateChange(value as Date)}
               value={selectedDate}
               className="w-full bg-transparent text-[#7fd7ff]"
               tileClassName={calendarTileClassName}
@@ -261,7 +259,7 @@ export default function Journal() {
               }
             />
             <div className="mt-3 text-xs text-[#b6eaff]/70 text-center">
-              Click a date to view or edit that day's entry
+              Click a date to view or edit that day&apos;s entry
             </div>
           </div>
 

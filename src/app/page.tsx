@@ -1,9 +1,6 @@
 'use client';
 
 import PetDisplay from "../components/PetDisplay";
-import PetChat from "../components/PetChat";
-import PetActions from "../components/PetActions";
-import MiniGames from "../components/MiniGames";
 import Journal from "../components/Journal";
 import { redirect } from "next/navigation";
 import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
@@ -12,7 +9,6 @@ import { firebaseConfig } from "../firebaseConfig";
 import { initializeApp } from "firebase/app";
 import Playlist from "../components/Playlist";
 import PetLevel from "../components/PetLevel";
-import DailyJournal from "../components/DailyJournal";
 import AIChat from "../components/AIChat";
 import Calendar from "react-calendar";
 import 'react-calendar/dist/Calendar.css';
@@ -53,7 +49,7 @@ async function saveUserProfileToFirestore(uid: string, profileData: Partial<User
 }
 
 // Update specific fields in Firestore
-async function updateUserField(uid: string, field: string, value: any) {
+async function updateUserField<T = unknown>(uid: string, field: string, value: T) {
   try {
     const userDocRef = doc(db, "users", uid);
     await updateDoc(userDocRef, {
